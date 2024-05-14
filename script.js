@@ -1,8 +1,5 @@
 // Stats Server LG
 $.getJSON("https://api.mcsrvstat.us/3/lg.singularserver.fr", function (data) {
-  // console.log(data.players.max);
-  // console.log(data.players.online);
-  // console.log(data.online);
 
   var lgOnlineText = document.getElementById("lg-online");
   var lgPlayerOnline = document.getElementById("lg-player-online");
@@ -36,7 +33,22 @@ $.getJSON("https://api.mcsrvstat.us/3/mod.singularserver.fr", function (data) {
 
 // ClipBoard copy
 
-function copyIp() {
-  
-  navigator.clipboard.writeText("lg.singularserver.fr");
-}
+  document.addEventListener('DOMContentLoaded', (event) => {
+    // Sélectionner tous les boutons par leur classe
+    const boutons = document.querySelectorAll('.copieIp');
+
+    // Ajouter un écouteur d'événements 'click' à chaque bouton
+    boutons.forEach(bouton => {
+        bouton.addEventListener('click', (event) => {
+            // Récupérer et afficher le contenu du bouton cliqué
+            const contenuBouton = event.target.textContent;
+
+            // On préviens l'utilisateur de la copie
+            alert('Text copié !');
+
+            // On l'écrit dans le press papier
+            navigator.clipboard.writeText(contenuBouton);
+        });
+    });
+  });
+
