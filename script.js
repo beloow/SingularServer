@@ -33,3 +33,10 @@ $.getJSON("https://api.mcsrvstat.us/3/mod.singularserver.fr", function (data) {
   modPlayerOnline.textContent = data.players.online;
   modPlayerMax.textContent = data.players.max;
 });
+
+// ClipBoard copy
+
+function copyIp() {
+  
+  navigator.clipboard.writeText("lg.singularserver.fr");
+}
