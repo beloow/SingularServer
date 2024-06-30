@@ -16,7 +16,7 @@ $.getJSON("https://api.mcsrvstat.us/3/lg.singularserver.fr", function (data) {
 });
 
 // Stats Server Modée
-$.getJSON("https://api.mcsrvstat.us/3/horror.singularserver.fr", function (data) {
+$.getJSON("https://api.mcsrvstat.us/3/mod.singularserver.fr", function (data) {
   var modOnlineText = document.getElementById("mod-online");
   var modPlayerOnline = document.getElementById("mod-player-online");
   var modPlayerMax = document.getElementById("mod-player-max");
